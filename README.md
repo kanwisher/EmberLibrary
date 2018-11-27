@@ -1,2 +1,2 @@
 # EmberLibrary
-App to explore ember functionality
+App to explore Ember functionality
