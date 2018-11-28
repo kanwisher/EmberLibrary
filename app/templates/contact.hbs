@@ -1,1 +1,18 @@
 <h1>Contact</h1>
+
+<section>
+  <form action="/">
+    <label for="userEmail">
+      {{input type="email" value=emailAddress placeholder="Please type your e-mail address." autofocus="autofocus" id="userEmail"}}
+    </label>
+    <label for="userCommment">
+        {{textarea value=message placeholder="Your message. (At least 5 characters.)" rows="7" autofocus="autofocus" id="userComment"}}
+    </label>
+    <button disabled={{unless formValid 'disabled'}} {{action 'sendMessage'}}>Send Message</button>
+  </form>
+
+  {{#if responseMessage}}
+    <div>{{responseMessage}}</div>
+  {{/if}}
+
+</section>
