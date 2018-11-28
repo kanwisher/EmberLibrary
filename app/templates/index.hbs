@@ -1,0 +1,18 @@
+<h1>Home Page</h1>
+
+<section>
+  <h1>Coming Soon</h1>
+  <p>Don't miss our launch date, request an invitation now.</p>
+
+  <form action="/">
+    <label for="userEmail">
+      {{input type="email" value=emailAddress placeholder="Please type your e-mail address." autofocus="autofocus" id="userEmail"}}
+    </label>
+    <button disabled={{isDisabled}} {{action 'saveInvitation'}}>Request Invitation</button>
+  </form>
+
+  {{#if responseMessage}}
+    <div>{{responseMessage}}</div>
+  {{/if}}
+  
+</section>
